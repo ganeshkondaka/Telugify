@@ -1,0 +1,28 @@
+{
+  "name": "telugify",
+  "version": "1.0.0",
+  "description": "custome errors in telugu",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganeshkondaka/Telugify.git"
+  },
+  "keywords": [
+    "telugu",
+    "custom_errors",
+    "status_codes",
+    "indian"
+  ],
+  "author": "ganesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ganeshkondaka/Telugify/issues"
+  },
+  "homepage": "https://github.com/ganeshkondaka/Telugify#readme"
+}
