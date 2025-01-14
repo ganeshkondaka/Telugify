@@ -1,8 +1,8 @@
 {
   "name": "telugify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "custome errors in telugu",
-  "main": "index.js",
+  "main": "src/index.js",
   "directories": {
     "test": "test"
   },
