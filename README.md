@@ -2,6 +2,9 @@
 
 `Telugify` is a fun and expressive NPM library that converts HTTP error codes into meaningful, quirky, and humorous error messages in **Telugu**! Make your application logs more relatable for Telugu-speaking developers. 🎉
 
+npm link ⬇️
+https://www.npmjs.com/package/telugify
+
 # Telugify 🌟
 
 [![npm version](https://img.shields.io/npm/v/telugify.svg)](https://www.npmjs.com/package/telugify)
@@ -29,19 +32,23 @@ Here’s how you can use the telugify library in your project:
 Example:------------------
 
 ```bash
-// Import the Telugify library
-const { telugify } = require('telugify');
 
-// Simulate an error object with a response status
-const error = {
-  response: {
-    status: 404, // Example: HTTP 404 error},};
+app.get('/api/data', async (req, res) => {
+  try {
+    // Simulate an API operation (e.g., database query)
+    const data = await fetchDataFromDatabase(); // Replace with actual DB function
+    res.status(200).json({ success: true, data });
+  } catch (error) {
+    // Use Telugify to handle and display the error message
+    telugify(error);
 
-// Pass the error object to telugify
-telugify(error); 
-
-// Output:
-// "ఏమిటి రా! {resource} ఇక్కడ ఎక్కడా కనబడట్లేదు రా!"
+    // Respond with a generic message to the client
+    res.status(error.response?.status || 500).json({
+      success: false,
+      message: 'An error occurred. Check server logs for details.',
+    });
+  }
+});
 
 ```
 
